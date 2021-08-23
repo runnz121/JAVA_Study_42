@@ -5,6 +5,8 @@ public class StudentInfo {
     private String name;
     private int grade;
 
+    //2) 은닉화 생성자로 호출
+
     //public StudentInfo (){} //-> 기본 생성자(클래스 이름과 항상 동일)
     public StudentInfo (int id, String names, int level){ //직접 파라미터를 받는 생성자를 선언
         this.studentID = id;

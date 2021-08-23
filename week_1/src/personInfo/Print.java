@@ -5,6 +5,7 @@ public class Print {
 
     public static void main(String[] args) {
         Info info = new Info();
+        //System.out.println(info.age);
         Scanner sc = new Scanner(System.in);
         System.out.println("사람이면 사람을 입력해주세요");
         String human = sc.nextLine();
