@@ -28,7 +28,6 @@ public class ObjectCopy2 {
             bookArray2[i].showBookInfo();
         }
 
-
         //깊은 복사 for문으로 새로운 객체를 new로 생성해서 직접 넣어줌
         Book[] bookArray3 = new Book[3];
         System.arraycopy(bookArray1, 0, bookArray3, 0, 3);

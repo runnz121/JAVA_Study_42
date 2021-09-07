@@ -1,7 +1,9 @@
 package ex3;
 public class CardCompany {
 
-    private static CardCompany company = null;
+    //하나의 회사에서 발급됨으로 싱글톤으로 유일 인스턴스 반환
+    private static CardCompany company = new CardCompany();
+
     private CardCompany(){}
 
     public static CardCompany getInstance() {
@@ -11,9 +13,8 @@ public class CardCompany {
         return company;
     }
 
-    //참조변수 card로 반환
-    //instance없이 사용하기 위해 static 붙임
-    public static Card createCard(){
+    //메소드 호출시 card instance 생성
+     public Card createCard(){
         Card card = new Card();
         return card;
     }
