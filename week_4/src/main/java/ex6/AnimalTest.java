@@ -18,25 +18,36 @@ public class AnimalTest {
         test.testDownCasting(animalList);
     }
 
-    private void testDownCasting(ArrayList<Animal> animalList) {
-        for(int i = 0 ; i <animalList.size(); i++) {
-            Animal animal = animalList.get(i);
+    //private void testDownCasting(ArrayList<Animal> animalList) {
+//        for(int i = 0 ; i <animalList.size(); i++) {
+//            Animal animal = animalList.get(i);
+//
+//            //해당 인스턴스가 맞는지 확인
+//            if(animal instanceof Human ) {
+//                //다운캐스팅 실행
+//                Human human = (Human)animal;
+//                human.readBook();
+//            } else if (animal instanceof Tiger ) {
+//                Tiger tiger = (Tiger)animal;
+//                tiger.hunt();
+//            } else if (animal instanceof Eagle ) {
+//                Eagle eagle = (Eagle)animal;
+//                eagle.flying();
+//            } else {
+//                System.out.println("error");
+//            }
+//        }
+//    }
 
-            //해당 인스턴스가 맞는지 확인
-            if(animal instanceof Human ) {
-                //다운캐스팅 실행
-                Human human = (Human)animal;
-                human.readBook();
-            } else if (animal instanceof Tiger ) {
-                Tiger tiger = (Tiger)animal;
-                tiger.hunt();
-            } else if (animal instanceof Eagle ) {
-                Eagle eagle = (Eagle)animal;
-                eagle.flying();
-            } else {
-                System.out.println("error");
+        public void testDownCasting(ArrayList<Animal> animalList) {
+            for (Animal elem : animalList) {
+                if (elem instanceof Human)
+                    ((Human)(elem)).readBook();
+                else if (elem instanceof Tiger)
+                    ((Tiger)(elem)).hunt();
+                else if (elem instanceof Eagle)
+                    ((Eagle)(elem)).flying();
             }
         }
-    }
 }
 
